@@ -1,0 +1,32 @@
+# 可执行文件
+chplus
+chplus.exe
+
+# Python 构建产物
+__pycache__/
+*.pyc
+*.pyo
+
+# 包安装目录
+venv/
+env/
+
+# 依赖锁定文件
+uv.lock
+
+# 自动生成的目录
+chplus_ide.egg-info/
+
+# 配置文件（如果包含敏感信息）
+chplus_ide.ini
+
+# IDE 相关
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系统相关
+.DS_Store
+Thumbs.db

@@ -4004,7 +4004,10 @@ class CHPlusIDE(QMainWindow):
             script_dir = os.path.dirname(os.path.abspath(__file__))
             
             # 构建运行命令
-            run_cmd = [os.path.join(script_dir, "chplus.exe")]
+            if sys.platform == "win32":
+                run_cmd = [os.path.join(script_dir, "chplus.exe")]
+            else:
+                run_cmd = [os.path.join(script_dir, "chplus")]
             
             # 添加-p参数，执行完后暂停，防止cmd闪退
             run_cmd.append("-p")
@@ -4027,7 +4030,6 @@ class CHPlusIDE(QMainWindow):
                     if sys.platform == "win32":
                         # Windows平台：使用subprocess.Popen在新窗口中运行
                         # 使用CREATE_NEW_CONSOLE标志创建新控制台窗口
-                        import subprocess
                         try:
                             # 构建完整的命令列表
                             full_cmd_list = [os.path.join(script_dir, "chplus.exe")]

@@ -1,0 +1,15 @@
+[project]
+name = "chplus-ide"
+version = "1.0.0"
+description = "CH+ language IDE"
+authors = [
+    { name = "Author", email = "author@example.com" }
+]
+dependencies = ["PyQt6>=6.6.0"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["chplus_ide"]
